@@ -1,0 +1,19 @@
+# Runtime outputs
+logs/
+
+# Heavy local dependencies and checkpoints
+lib/
+models/
+
+# Python cache/build
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+build/
+dist/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store

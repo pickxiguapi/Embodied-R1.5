@@ -1,0 +1,106 @@
+data:
+  train_files: null
+  val_files: null
+  prompt_key: problem
+  answer_key: answer
+  image_key: images
+  video_key: videos
+  problem_type_key: problem_type
+  problem_id_key: problem_id
+  options_key: options
+  data_type_key: data_type
+  data_source_key: data_source
+  image_dir: null
+  max_frames: 32
+  video_fps: 2
+  max_prompt_length: 3300
+  max_response_length: 2048
+  rollout_batch_size: 512
+  mini_rollout_batch_size: null
+  val_batch_size: 128
+  format_prompt: null
+  override_chat_template: null
+  shuffle: true
+  seed: 1
+  min_pixels: 8192
+  max_pixels: 2867200
+  filter_overlong_prompts: false
+
+algorithm:
+  adv_estimator: mbpo
+  disable_kl: false
+  use_kl_loss: false
+  kl_penalty: kl
+  kl_coef: 1.0e-2
+  online_filtering: true
+  filter_key: overall
+  filter_low: 0.01
+  filter_high: 0.99
+
+worker:
+  actor:
+    global_batch_size: 256
+    micro_batch_size_per_device_for_update: 4
+    micro_batch_size_per_device_for_experience: 8
+    max_grad_norm: 1.0
+    padding_free: true
+    dynamic_batching: true
+    model:
+      model_path: Qwen/Qwen3-VL-8B-Instruct
+      enable_gradient_checkpointing: true
+      trust_remote_code: true
+      freeze_vision_tower: false
+    optim:
+      lr: 3.0e-6
+      weight_decay: 1.0e-2
+      strategy: adamw
+    fsdp:
+      enable_full_shard: true
+      enable_cpu_offload: false
+      enable_rank0_init: true
+    offload:
+      offload_params: true
+      offload_optimizer: true
+
+  rollout:
+    n: 8
+    temperature: 1.0
+    top_p: 1.0
+    gpu_memory_utilization: 0.6
+    tensor_parallel_size: 2
+    disable_tqdm: true
+    val_override_config:
+      temperature: 0.7
+      top_p: 0.95
+      n: 1
+
+  ref:
+    fsdp:
+      enable_full_shard: true
+      enable_cpu_offload: true
+      enable_rank0_init: true
+
+  reward:
+    reward_function: ER1.5_scripts/reward_function/embodied_reward.py:compute_score
+    reward_function_kwargs:
+      format_weight: 0.1
+
+trainer:
+  total_epochs: 3
+  max_steps: null
+  project_name: embodied_r1_5
+  experiment_name: embodied_r1.5_rft
+  logger: ["file", "swanlab"]
+  nnodes: 1
+  n_gpus_per_node: 8
+  max_try_make_batch: 20
+  val_freq: 20
+  val_before_train: false
+  val_only: false
+  val_generations_to_log: 3
+  save_freq: 20
+  save_limit: 2
+  save_model_only: false
+  save_checkpoint_path: null
+  load_checkpoint_path: null
+  find_last_checkpoint: true

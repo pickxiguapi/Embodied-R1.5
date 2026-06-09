@@ -1,0 +1,57 @@
+### model
+model_name_or_path: Qwen/Qwen3-VL-8B-Instruct
+image_max_pixels: 3000000
+video_max_pixels: 802816
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+freeze_vision_tower: true
+freeze_multi_modal_projector: true
+freeze_language_model: false
+deepspeed: LLaMA-Factory/examples/deepspeed/ds_z2_config.json
+
+### dataset
+dataset_dir: dataset
+dataset: null
+template: qwen3_vl_nothink
+cutoff_len: 8192
+max_samples: null
+overwrite_cache: true
+preprocessing_num_workers: 48
+preprocessing_batch_size: 1000
+dataloader_num_workers: 16
+tokenized_path: null  # Set to a local path to cache tokenized data and speed up restarts
+seed: 777
+
+### output
+output_dir: saves/qwen3vl-8b/full/sft
+logging_steps: 50
+save_strategy: steps
+save_steps: 500
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: swanlab  # choices: [none, wandb, tensorboard, swanlab, mlflow]
+swanlab_project: Embodied-R1.5
+swanlab_run_name: Embodied-R1.5-SFT
+
+### train
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 2.0e-6
+num_train_epochs: 1.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+gradient_checkpointing: true
+resume_from_checkpoint: null
+
+### eval
+# val_size: 0.01
+# per_device_eval_batch_size: 4
+# eval_strategy: steps
+# eval_steps: 800

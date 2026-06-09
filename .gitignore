@@ -1,0 +1,114 @@
+# ======================
+# Credentials & Tokens
+# ======================
+.hf_token
+*.token
+*_token
+*token*
+.env
+.env.*
+credentials.json
+*.key
+*.pem
+*.secret
+api_key*
+
+# ======================
+# Large Data & Outputs
+# ======================
+logs/
+checkpoints/
+outputs/
+results/
+*.log
+
+# Datasets (keep metadata/configs, exclude actual data)
+dataset/sharegpt_datasets/
+dataset/sft_datasets/
+*.arrow
+*.parquet
+*.bin
+*.npy
+*.npz
+
+# Model weights
+*.ckpt
+*.pth
+*.pt
+*.safetensors
+
+# ======================
+# Experiment Tracking
+# ======================
+wandb/
+swanlog/
+mlruns/
+.neptune/
+
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+
+# ======================
+# Virtual Environments
+# ======================
+venv/
+env/
+.venv/
+ENV/
+
+# ======================
+# Jupyter
+# ======================
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+
+# ======================
+# IDE & OS
+# ======================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ======================
+# Misc
+# ======================
+*.tmp
+*.bak
+*.backup
+*.bk
+*.bk[0-9]*
+core.*
+*.core
+.cache/
+*.tar.gz
+*.tar
+*.zip
+*.rar
+*.7z
+
+# Claude Code
+.claude/
+EasyR1/rft_train_datasets/
+EasyR1/rft_test_datasets/
+dataset/
