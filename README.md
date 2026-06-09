@@ -5,6 +5,7 @@
   <a href="https://github.com/pickxiguapi/Embodied-R1.5"><img src="https://img.shields.io/badge/GitHub-Code-181717?logo=github" alt="Code"></a>
   <a href="https://github.com/pickxiguapi/EmbodiedEvalKit"><img src="https://img.shields.io/badge/GitHub-EmbodiedEvalKit-181717?logo=github" alt="EmbodiedEvalKit"></a>
   <a href="https://huggingface.co/collections/IffYuan/embodied-r15"><img src="https://img.shields.io/badge/🤗%20HuggingFace-Models%20%26%20Datasets-yellow" alt="HuggingFace"></a>
+  <a href="https://huggingface.co/collections/IffYuan/embodiedevalkit"><img src="https://img.shields.io/badge/🤗%20HuggingFace-Benchmarks-orange" alt="Benchmarks"></a>
 </p>
 
 > *"Reasoning initiates the action; Action fulfills the reasoning."* — Wang Yangming (1509)
@@ -27,6 +28,7 @@ Trained on a 15B-token corpus with a multi-task balanced RL recipe, it further d
 | 💻 Code | https://github.com/pickxiguapi/Embodied-R1.5 |
 | 📊 EmbodiedEvalKit | https://github.com/pickxiguapi/EmbodiedEvalKit |
 | 🤗 Models & Datasets | https://huggingface.co/collections/IffYuan/embodied-r15 |
+| 🤗 Benchmarks (unified Parquet) | https://huggingface.co/collections/IffYuan/embodiedevalkit |
 
 ## Installation
 
