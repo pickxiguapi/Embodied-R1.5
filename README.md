@@ -208,7 +208,7 @@ If you find Embodied-R1.5 useful in your research, please cite our work:
 ```bibtex
 @article{yuan2026embodiedr15,
   title={Embodied-R1.5: Evolving Physical Intelligence via Embodied Foundation Models},
-  author={Yuan, Yifu and Huang, Yaoting and Yao, Xianze and Zhang, Shuoheng and Han, Linqi and Li, Yutong and Li, Pengyi and Sun, Jiangeng and Jia, Wenting and Hu, Yucheng and Liu, Yuhao and Liao, Ruihao and Wu, Qiyu and Li, Yuxiao and Zhang, Zhao and Dong, Zibin and Ni, Fei and Zheng, Yan and Gu, Shuyang and Ma, Yi and Tang, Hongyao and Hu, Han and Hao, Jianye},
+  author={Yuan, Yifu and Huang, Yaoting and Yao, Xianze and Li, Yutong and Zhang, Shuoheng and Han, Linqi and Li, Pengyi and Sun, Jiangeng and Jia, Wenting and Zhang, Zhao and Liu, Yuhao and Liao, Ruihao and Hu, Yucheng and Wu, Qiyu and Li, Yuxiao and Dong, Zibin and Ni, Fei and Zheng, Yan and Gu, Shuyang and Ma, Yi and Tang, Hongyao and Hu, Han and Hao, Jianye},
   journal={arXiv preprint},
   year={2026}
 }
