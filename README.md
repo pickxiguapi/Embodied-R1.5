@@ -176,6 +176,17 @@ bash ER1.5_scripts/rft_train.sh
 
 Datasets are available at the [Embodied-R1.5 HuggingFace collection](https://huggingface.co/collections/IffYuan/embodied-r15).
 
+## VLA Checkpoints
+
+With light action-data fine-tuning, Embodied-R1.5 can be adapted into **Embodied-R1.5-VLA**, a vision-language-action model that directly outputs continuous actions. We release the following VLA checkpoints:
+
+| Checkpoint | Benchmark | Link |
+|------------|-----------|------|
+| Embodied-R1.5-VLA-LIBERO | LIBERO | https://huggingface.co/IffYuan/Embodied-R1.5-VLA-LIBERO |
+| Embodied-R1.5-VLA-SIMPLER | SimplerEnv | https://huggingface.co/IffYuan/Embodied-R1.5-VLA-SIMPLER |
+
+VLA training and inference use the [starVLA](https://github.com/starVLA/starVLA) framework. Please refer to the starVLA repository for environment setup and usage instructions.
+
 ## Data Annotation
 
 [`Embodied-Label/`](Embodied-Label/) is one of our data construction pipelines, used to annotate raw RGB images into structured 3D embodied training data (semantic tags, depth, surface normals, and labeled point clouds).
