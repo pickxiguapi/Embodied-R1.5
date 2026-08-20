@@ -10,6 +10,15 @@
 
 > *"Reasoning initiates the action; Action fulfills the reasoning."* — Wang Yangming (1509)
 
+## 📢 Dataset Release Update — August 20, 2026
+
+> ✅ **The training JSON annotations for both stages are now fully available on Hugging Face.** All released JSON files are centralized in dedicated folders, and each dataset card provides the complete mapping from every JSON file to its referenced image/video data.
+
+| Training stage | JSON release | Location & mapping |
+|----------------|--------------|--------------------|
+| **Stage 1: SFT** | ✅ 34 ShareGPT-format JSON files | [`sft_datasets_json/`](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-SFT-Dataset/tree/main/sft_datasets_json) · [JSON ↔ media mapping](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-SFT-Dataset#dataset-composition) |
+| **Stage 2: RFT** | ✅ 28 verifiable-QA JSON files | [`rft_datasets_json/`](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-RFT-Dataset/tree/main/rft_datasets_json) · [JSON ↔ media mapping](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-RFT-Dataset#dataset-composition) |
+
 ## Overview
 
 **Embodied-R1.5** is a unified **Embodied Foundation Model (EFM)**, built on **Qwen3-VL-8B-Instruct**, that integrates comprehensive embodied reasoning within a single architecture. Building on our prior work [Embodied-R1](https://github.com/pickxiguapi/Embodied-R1), it leaps from a pointing specialist to a comprehensive EFM unifying **three core capabilities**:
@@ -28,6 +37,8 @@ Trained on a 15B-token corpus with a multi-task balanced RL recipe, it further d
 | 💻 Code | https://github.com/pickxiguapi/Embodied-R1.5 |
 | 📊 EmbodiedEvalKit | https://github.com/pickxiguapi/EmbodiedEvalKit |
 | 🤗 Models & Datasets | https://huggingface.co/collections/IffYuan/embodied-r15 |
+| 📚 Stage 1 SFT Dataset | https://huggingface.co/datasets/IffYuan/Embodied-R1.5-SFT-Dataset |
+| 🎯 Stage 2 RFT Dataset | https://huggingface.co/datasets/IffYuan/Embodied-R1.5-RFT-Dataset |
 | 🤗 Benchmarks (unified Parquet) | https://huggingface.co/collections/IffYuan/embodiedevalkit |
 
 ## Installation
@@ -174,9 +185,9 @@ cd EasyR1
 bash ER1.5_scripts/rft_train.sh
 ```
 
-> ⚠️ **Note.** Some of the training dataset mappings are not yet complete and will be updated soon.
+> ✅ **Training data released.** All released SFT and RFT JSON annotation files have been uploaded to Hugging Face. The [SFT dataset card](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-SFT-Dataset#dataset-composition) and [RFT dataset card](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-RFT-Dataset#dataset-composition) document the complete mapping between each JSON file and its referenced image/video data.
 
-Datasets are available at the [Embodied-R1.5 HuggingFace collection](https://huggingface.co/collections/IffYuan/embodied-r15).
+All models and datasets are collected in the [Embodied-R1.5 Hugging Face collection](https://huggingface.co/collections/IffYuan/embodied-r15).
 
 ## VLA Checkpoints
 
