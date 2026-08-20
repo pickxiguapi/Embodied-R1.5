@@ -14,6 +14,8 @@
 
 > ✅ **The training JSON annotations for both stages are now fully available on Hugging Face.** All released JSON files are centralized in dedicated folders, and each dataset card provides the complete mapping from every JSON file to its referenced image/video data.
 
+> **Note:** A small subset of datasets cannot be publicly released due to institutional policies.
+
 | Training stage | JSON release | Location & mapping |
 |----------------|--------------|--------------------|
 | **Stage 1: SFT** | ✅ 34 ShareGPT-format JSON files | [`sft_datasets_json/`](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-SFT-Dataset/tree/main/sft_datasets_json) · [JSON ↔ media mapping](https://huggingface.co/datasets/IffYuan/Embodied-R1.5-SFT-Dataset#dataset-composition) |
